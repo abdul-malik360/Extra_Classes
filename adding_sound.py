@@ -1,13 +1,14 @@
+from tkinter import *
 import multiprocessing
 from playsound import playsound
-from tkinter import *
+
 
 window = Tk()
 window.title("Play Sound")
 window.geometry("300x200")
+window.resizable(0, 0)
 
-p = multiprocessing.Process(target=playsound, args=(""))
-
+p = multiprocessing.Process(target=playsound, args=("granted.mp3",))
 
 
 def play_sound():
